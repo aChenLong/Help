@@ -1,0 +1,11 @@
+/**
+ 编码带中文的url
+
+ @param url
+ @return 编码后的url
+ */
+- (NSString *)encodeURL:(NSString *)url{
+	NSCharacterSet *set = [NSCharacterSet characterSetWithCharactersInString:url];
+	NSString *encode = [url stringByAddingPercentEncodingWithAllowedCharacters:set];
+	return encode;
+}
